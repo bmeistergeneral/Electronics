@@ -1,11 +1,20 @@
 #include <iostream>
-#include "ElectronicDevice.h"
+#pragma once
+#ifndef AUDIOPLAYER_H
+#define AUDIOPLAYER_H
 
-// using namespace std;
+#include "ElectronicDevice.h"
 
 class AudioPlayer: public ElectronicDevice {
 
+private:
+    int level;
+    int length;
+    
 public:
+    
+    AudioPlayer(std::string manuf, std::string mod, std::string ser);
+    
     int getSoundLevel();
     void setSoundLevel(int l);
     int getSoundLength();
@@ -13,8 +22,6 @@ public:
     void stopSound();
 
     std::string to_string();
-
-private:
-    int getMemoryStorage();
-    void setMemoryStorage(int s);
 };
+
+#endif

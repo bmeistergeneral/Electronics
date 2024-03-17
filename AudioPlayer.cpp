@@ -1,43 +1,31 @@
-#include <iostream>
 #include "AudioPlayer.h"
 
-// using namespace std;
+    AudioPlayer::AudioPlayer(std::string manuf, std::string mod, std::string ser) : ElectronicDevice(manuf, mod, ser) {
+        level = 8;
+        length = 0;
+    }
 
-class Player: public ElectronicDevice {
-    
-    private:
-        int level;
-        int length;
-        int storage;
-
-    bool playSound(std::string sound) {
-        // cout << "I am currently playing the sound: \n" << sound;
+    bool AudioPlayer::playSound(std::string sound) {
+        std::cout << "I am currently playing the sound: \n" << sound;
         return true;
     }
 
-    void stopSound() {
+    void AudioPlayer::stopSound() {
         std::cout << "Stopping sound... \n";
     }
 
-    int getSoundLevel() {
+    int AudioPlayer::getSoundLevel() {
         return level;
     }
 
-    void setSoundLevel(int l) {
+    void AudioPlayer::setSoundLevel(int l) {
         level = l;
     }
 
-    int getSoundLength() {
+    int AudioPlayer::getSoundLength() {
         return length;
     }
-
-    int getMemoryStorage() {
-        return storage;
-    }
-
-    void setMemoryStorage(int s) {
-        storage = s;
-    }
     
-    // std::string to_string() 
-};
+    // std::string AudioPlayer::to_string {
+
+    // }
