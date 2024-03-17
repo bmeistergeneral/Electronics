@@ -17,3 +17,7 @@
     std::string ElectronicDevice::getModelName() {
         return modelName;
     }
+
+    std::string ElectronicDevice::to_string() {
+	    return "ElectronicDevice: " + getManufacturerName() + ", " + getModelName() + "," + getSerialNumber();
+    }
