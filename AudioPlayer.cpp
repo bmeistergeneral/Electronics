@@ -1,4 +1,5 @@
 #include "AudioPlayer.h"
+#include <string>
 
     AudioPlayer::AudioPlayer(std::string manuf, std::string mod, std::string ser) : ElectronicDevice(manuf, mod, ser) {
         level = 8;
@@ -26,6 +27,8 @@
         return length;
     }
     
-    // std::string AudioPlayer::to_string {
-
-    // }
+    std::string AudioPlayer::to_string() {
+	    return "AudioPlayer: " + getManufacturerName() + ", " 
+                + getModelName() + ", " + getSerialNumber() + ", " 
+                + std::to_string(getSoundLevel()) + ", " + std::to_string(getSoundLength());
+    }

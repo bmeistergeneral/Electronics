@@ -17,3 +17,8 @@
         recording = false;
         std::cout << "This recorder has stopped recording. \n";
     }
+
+    std::string MediaPlayerRecorder::to_string() {
+	    return "MediaPlayerRecorder: " + getManufacturerName() + ", " 
+                + getModelName() + ", " + getSerialNumber() + ", ";
+    }

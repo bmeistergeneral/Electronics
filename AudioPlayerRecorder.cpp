@@ -17,4 +17,8 @@
         recording = false;
         std::cout << "This recorder has stopped recording. \n";
     }
+    std::string AudioPlayerRecorder::to_string() {
+	    return "AudioPlayerRecorder: " + getManufacturerName() + ", " 
+                + getModelName() + ", " + getSerialNumber() + ", ";
+    }
     

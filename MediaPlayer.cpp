@@ -28,6 +28,8 @@
         return true;
     }
 
-    // std::string to_string() {
-        
-    // }
+    std::string MediaPlayer::to_string() {
+	    return "MediaPlayer: " + getManufacturerName() + ", " 
+                + getModelName() + ", " + getSerialNumber() + ", " 
+                + std::to_string(getPixelLength()) + ", " + std::to_string(getPixelWidth());
+    }
