@@ -19,6 +19,6 @@
     }
     std::string AudioPlayerRecorder::to_string() {
 	    return "AudioPlayerRecorder: " + getManufacturerName() + ", " 
-                + getModelName() + ", " + getSerialNumber() + ", ";
+                + getModelName() + ", " + getSerialNumber() + ", " + std::to_string(isRecording()) + ". ";
     }
     

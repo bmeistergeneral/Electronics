@@ -20,5 +20,7 @@
 
     std::string MediaPlayerRecorder::to_string() {
 	    return "MediaPlayerRecorder: " + getManufacturerName() + ", " 
-                + getModelName() + ", " + getSerialNumber() + ", ";
+                + getModelName() + ", " + getSerialNumber() + ", " + std::to_string(isRecording()) 
+                + std::to_string(getPixelLength()) 
+                + std::to_string(getPixelWidth()) + std::to_string(getFrameRate());
     }

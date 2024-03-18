@@ -8,8 +8,13 @@
 int main() {
     AudioPlayer earbuds("Apple", "Airpods", "6346782yehdby7374");
     std::cout << "Serial number: " << earbuds.getSerialNumber() << "\n";
+    earbuds.playSound("Trombone");
+    earbuds.stopSound();
     MediaPlayer television(1920, 1080, 240, "Vizio", "E220VA", "LTTXGEUN0501415");
     std::cout << "Model number: " << television.getModelName() << "\n";
+    television.playVideo("cats");
+    television.getPixelWidth();
+    television.getFrameRate();
     AudioPlayerRecorder headset("Sony", "DT 770 PRO", "isutf7w983y7rh");
     std::cout << "Manufacturer: " << headset.getManufacturerName() << "\n";
     MediaPlayerRecorder computer(2560, 1600, 60, "Apple", "Macbook Pro", "C02V13VWHV2M");
