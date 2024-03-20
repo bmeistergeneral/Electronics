@@ -17,8 +17,14 @@ int main() {
     television.getFrameRate();
     AudioPlayerRecorder headset("Sony", "DT 770 PRO", "isutf7w983y7rh");
     std::cout << "Manufacturer: " << headset.getManufacturerName() << "\n";
+    headset.isRecording();
+    headset.startRecording();
+    headset.stopRecording();
     MediaPlayerRecorder computer(2560, 1600, 60, "Apple", "Macbook Pro", "C02V13VWHV2M");
     std::cout << "Frame rate: " << computer.getFrameRate() << "\n";
+    computer.isRecording();
+    computer.startRecording();
+    computer.stopRecording();
     MediaPlayerRecorder ipad(2732, 2048, 60, "Apple", "iPad Pro 12.9 inch", "2H7aBGd4a6STl");
     std::cout << "Serial number: " << ipad.getSerialNumber() << "\n";
     MediaPlayerRecorder camera(4096, 2160, 7, "Canon", "EOS 5D Mark IV Body", "023010096");
